@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Somi ❤️</title>
+
+<style>
+
+body{
+  text-align:center;
+  font-family:Arial;
+  background:#ffdde1;
+  transition:0.5s;
+}
+
+.stage{
+  display:none;
+  padding:40px;
+}
+
+.active{
+  display:block;
+}
+
+button{
+  padding:12px 20px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+.hearts{
+  background-image:url("https://i.imgur.com/8B7Q8.gif");
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- STAGE 1 -->
+<div id="stage1" class="stage active hearts">
+
+<h2>Will you be with me forever Somi ♾️?</h2>
+
+<img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="200">
+
+<br>
+
+<button onclick="yes1()">Yes 😚</button>
+<button onclick="no1()">No 🫣</button>
+
+</div>
+
+<!-- STAGE 2 -->
+<div id="stage2" class="stage">
+
+<h2>Will you ever change your feelings for me like you have now ?</h2>
+
+<img src="https://media.giphy.com/media/love/giphy.gif" width="200">
+
+<br>
+
+<button onclick="never()">Never</button>
+<button onclick="might()">Might be</button>
+
+</div>
+
+<!-- STAGE 3 -->
+<div id="stage3" class="stage hearts">
+
+<h2>Aaja ko din kasto vayo ta Bhai ?</h2>
+
+<button onclick="masta()">masta Bhai 😍</button>
+<button onclick="bekar()">bekar yr 😓</button>
+
+</div>
+
+<!-- STAGE 4 -->
+<div id="stage4" class="stage">
+
+<h2>Will you be my valentine ?</h2>
+
+<button onclick="valYes()">Yes 🫴</button>
+<button>No sorry</button>
+
+</div>
+
+<!-- STAGE 5 -->
+<div id="stage5" class="stage hearts">
+
+<h2>Xodera ta Jannas ni Bhai ta ?</h2>
+
+<button onclick="stay()">Janna kaillei</button>
+<button>janxu</button>
+
+</div>
+
+<!-- FINAL -->
+<div id="final" class="stage hearts">
+
+<h2>तिम्रो मेरो यात्रा यहाँ सम्मको हुन्छ जस्तो परिस्थिती आए पनि साथ कहिल्यै नछोड्नु है माया । 🤍♾️</h2>
+
+<button onclick="finalLove()">Huss budo</button>
+<button>sakdiana sorry</button>
+
+</div>
+
+<script>
+
+function next(id){
+document.querySelectorAll(".stage").forEach(s=>s.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+}
+
+/* Stage 1 */
+
+function yes1(){
+event.target.innerText="sachhai😍";
+event.target.onclick=function(){
+event.target.innerText="Okay teso vaye💍";
+setTimeout(()=>next("stage2"),1000);
+}
+}
+
+function no1(){
+event.target.innerText="OK 👍";
+setTimeout(()=>next("stage2"),1000);
+}
+
+/* Stage 2 */
+
+function never(){
+event.target.innerText="zhut ta haina ni Bhai🤭";
+}
+
+function might(){
+event.target.innerText="haina Bhai";
+event.target.onclick=function(){
+event.target.innerText="Okay princess love you 😚";
+setTimeout(()=>next("stage3"),1000);
+}
+}
+
+/* Stage 3 */
+
+function masta(){
+event.target.innerText="dherai Maja aayo aaja sappai le clap gare malai😍";
+setTimeout(()=>next("stage4"),1500);
+}
+
+function bekar(){
+event.target.innerText="billa vayo aaja kei Maja aayena 🥺";
+setTimeout(()=>next("stage4"),1500);
+}
+
+/* Stage 4 */
+
+function valYes(){
+event.target.innerText="really 😭";
+event.target.onclick=function(){
+event.target.innerText="I love you budo 🤍";
+setTimeout(()=>next("stage5"),1500);
+}
+}
+
+/* Stage 5 */
+
+function stay(){
+event.target.innerText="kaillei Pani Jannas Ra🥹";
+event.target.onclick=function(){
+event.target.innerText="huss iloveyou somuch🤍";
+setTimeout(()=>next("final"),1500);
+}
+}
+
+function finalLove(){
+event.target.innerText="Iloveyou budi 🤍♾️";
+}
+
+</script>
+
+</body>
+</html>
